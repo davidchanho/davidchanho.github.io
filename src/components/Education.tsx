@@ -1,22 +1,29 @@
 import Section from "components/layout/Section";
 import SectionItem from "components/layout/SectionItem";
 import SectionSubtitle from "components/layout/SectionSubtitle";
+import { data } from "model/data";
 import React from "react";
 import { Col, ListGroup, Row } from "react-bootstrap";
 
 function Education() {
+  const school = data.education.school
+  const certifications = data.education.certifications
+  
   return (
     <Section header="Education">
       <ListGroup>
         <Row>
           <Col>
             <SectionSubtitle subtitle="University" />
-            <SectionItem title="Johnson & Wales University &middot; 2012" subtitle="Bachelors in Accounting" />
+            {school.map((item) =>
+              <SectionItem key={item.title} title={item.title} subtitle={item.subtitle} />
+            )}
           </Col>
           <Col>
             <SectionSubtitle subtitle="Certifications" />
-            <SectionItem title="Coding Bootcamp of UNC Chapel Hill &middot; 2020" subtitle="Bachelors in Accounting" />
-            <SectionItem title="Coursera IBM Data Science &middot; 2020" subtitle="Bachelors in Accounting" />
+            {certifications.map((item) =>
+              <SectionItem key={item.title} title={item.title} />
+            )}
           </Col>
         </Row>
       </ListGroup>
