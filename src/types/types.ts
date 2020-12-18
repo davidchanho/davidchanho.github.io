@@ -37,3 +37,8 @@ export interface IProject {
   github: string;
   link: string;
 }
+
+export interface NavLinkProps {
+  link: string;
+  name: string;
+}

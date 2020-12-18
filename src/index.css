@@ -24,3 +24,7 @@ code {
 img {
   width: 100%;
 }
+
+.click {
+  cursor: pointer;
+}
