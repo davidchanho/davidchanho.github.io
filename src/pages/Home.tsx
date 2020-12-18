@@ -10,11 +10,16 @@ import React from "react";
 function Home() {
   return (
     <Template>
+      <div id='about' />
       <Hero />
+      <div id='education' />
       <Education />
+      <div id='projects' />
       <Work />
       <Projects />
+      <div id='tech' />
       <FavoriteTechnology />
+      <div id='contacts' />
       <Contacts />
     </Template>
   );

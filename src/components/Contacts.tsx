@@ -15,7 +15,7 @@ function Contacts() {
   const handleSubmit = (e: FormEvent<HTMLFormElement | HTMLButtonElement>) => {
     e.preventDefault();
 
-    emailjs.sendForm(serviceId, templateId, '#contacts', userId)
+    emailjs.sendForm(serviceId, templateId, '#contactForm', userId)
       .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
         setSuccess(true);
@@ -38,7 +38,7 @@ function Contacts() {
   }
 
   return (
-    <Form id='contacts' className='w-50 my-5 d-flex flex-column mx-auto justify-content-center' onSubmit={handleSubmit}>
+    <Form id='contactForm' className='w-50 my-5 d-flex flex-column mx-auto justify-content-center' onSubmit={handleSubmit}>
       <h1>Contact Me</h1>
       <Form.Group controlId="formName">
         <Form.Label>Name</Form.Label>

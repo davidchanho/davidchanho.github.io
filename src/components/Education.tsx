@@ -10,26 +10,24 @@ function Education() {
   const certifications = data.education.certifications
 
   return (
-    <div id='education'>
-      <Section header="Education">
-        <ListGroup>
-          <Row>
-            <Col>
-              <SectionSubtitle subtitle="University" />
-              {school.map((item) =>
-                <SectionItem key={item.title} title={item.title} subtitle={item.subtitle} />
-              )}
-            </Col>
-            <Col>
-              <SectionSubtitle subtitle="Certifications" />
-              {certifications.map((item) =>
-                <SectionItem key={item.title} title={item.title} />
-              )}
-            </Col>
-          </Row>
-        </ListGroup>
-      </Section >
-    </div>
+    <Section header="Education">
+      <ListGroup>
+        <Row>
+          <Col>
+            <SectionSubtitle subtitle="University" />
+            {school.map((item) =>
+              <SectionItem key={item.title} title={item.title} subtitle={item.subtitle} />
+            )}
+          </Col>
+          <Col>
+            <SectionSubtitle subtitle="Certifications" />
+            {certifications.map((item) =>
+              <SectionItem key={item.title} title={item.title} />
+            )}
+          </Col>
+        </Row>
+      </ListGroup>
+    </Section >
   );
 }
 
