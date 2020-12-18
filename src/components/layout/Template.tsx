@@ -1,4 +1,4 @@
-import Navbar from "components/Navbar";
+import Navbar from "components/layout/Navbar";
 import React, { PropsWithChildren } from "react";
 
 function Template({ children }: PropsWithChildren<{}>) {

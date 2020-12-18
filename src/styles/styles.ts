@@ -5,7 +5,8 @@ export const HeroContainer = styled(Container)`
   background-color: #202020;
   .col {
     img {
-      width: 100px;
+      width: 150px;
+      margin-right: auto;
     }
   }
 `;

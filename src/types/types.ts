@@ -14,11 +14,9 @@ export interface SectionHeaderProps {
 }
 
 export interface ContactsProps {
-  data: {
-    name: string;
-    email: string;
-    message: string;
-  };
+  name: string;
+  email: string;
+  message: string;
 }
 
 export interface SectionSubtitleProps {

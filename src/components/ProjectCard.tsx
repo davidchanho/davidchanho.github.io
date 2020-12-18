@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
+import { AiFillGithub } from 'react-icons/ai'
 import { BiLinkExternal } from 'react-icons/bi'
-import { BsCode } from 'react-icons/bs'
 import { IProject } from 'types/types'
 
 function ProjectCard({ title, desc, backend, dataStorage, stateManager, hosting, github, link }: IProject) {
@@ -9,8 +9,8 @@ function ProjectCard({ title, desc, backend, dataStorage, stateManager, hosting,
         <Card key={title}>
             <Card.Header >
                 <Card.Title className='d-flex align-items-center'>
-                    <div>{title}</div> <div className="ml-auto"><a className='mr-2' href={github}><BsCode />
-                    </a> <a href={link}><BiLinkExternal /></a></div>
+                    <div>{title}</div> <div className="ml-auto"><a className='mr-2' target="_blank" rel='noreferrer' href={github}><AiFillGithub />
+                    </a> <a target="_blank" rel='noreferrer' href={link}><BiLinkExternal /></a></div>
                 </Card.Title>
             </Card.Header>
             <Card.Body>

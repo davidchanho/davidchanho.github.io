@@ -6,7 +6,7 @@ import { CardColumns, Container } from "react-bootstrap";
 
 function Projects() {
   return (
-    <div className="my-5">
+    <div  id='projects' className="my-5">
       <SectionHeader header='Projects' />
       <Container>
         <CardColumns className='mx-auto'>

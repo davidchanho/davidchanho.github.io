@@ -1,64 +1,74 @@
-import React from "react";
+import emailjs from 'emailjs-com';
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useForm } from "react-hook-form";
 import { ContactsProps } from "types/types";
-import * as yup from "yup";
+import { serviceId, templateId, userId } from '../config.json';
 
-const schema = yup.object({
-  name: yup.string().required(),
-  email: yup.string().required(),
-  message: yup.string().required(),
-});
+const initialForm = { name: '', email: '', message: '' }
 
 function Contacts() {
-  const { register, handleSubmit, errors } = useForm();
+  const [form, setForm] = useState<ContactsProps>(initialForm)
+  const [isDisabled, setDisabled] = useState<boolean>(true);
+  const [hasError, setError] = useState<boolean>(false);
+  const [hasSuccess, setSuccess] = useState<boolean | null>(null)
 
-  const onSubmit = (data: ContactsProps) => {
-    console.log(data);
+  const handleSubmit = (e: FormEvent<HTMLFormElement | HTMLButtonElement>) => {
+    e.preventDefault();
+
+    emailjs.sendForm(serviceId, templateId, '#contacts', userId)
+      .then(function (response) {
+        console.log('SUCCESS!', response.status, response.text);
+        setSuccess(true);
+        setForm(initialForm);
+      }, function (error) {
+        setError(true)
+      });
+    setForm(initialForm)
   };
 
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    if (form.name.length > 3 && form.email.length > 3 && form.message.length > 3) {
+      setDisabled(false);
+    }
+    setForm({
+      ...form,
+      [name]: value
+    })
+  }
+
   return (
-    <Form className='w-50 my-5 d-flex flex-column justify-content-center' onSubmit={handleSubmit(onSubmit)}>
+    <Form id='contacts' className='w-50 my-5 d-flex flex-column mx-auto justify-content-center' onSubmit={handleSubmit}>
       <h1>Contact Me</h1>
       <Form.Group controlId="formName">
         <Form.Label>Name</Form.Label>
-        <Form.Control name="name" type="text" placeholder="Enter name" />
-        <Form.Text className="text-muted">
-          {errors.name && "Name is required."}
-        </Form.Text>
+        <Form.Control onChange={handleChange} name="name" type="text" placeholder="Enter name" />
       </Form.Group>
 
       <Form.Group controlId="formEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control
+        <Form.Control onChange={handleChange}
           name="email"
-          ref={register({ required: true })}
           type="email"
           placeholder="Enter email"
         />
-        <Form.Text className="text-muted">
-          {errors.email && "Email is required."}
-        </Form.Text>
       </Form.Group>
 
       <Form.Group controlId="formMessage">
         <Form.Label>Message</Form.Label>
-        <Form.Control
+        <Form.Control onChange={handleChange}
           name="message"
           type="text"
           placeholder="Enter message"
           as="textarea"
           rows={3}
-          ref={register({ required: true })}
         />
-        <Form.Text className="text-muted">
-          {errors.message && "Message is required."}
-        </Form.Text>
       </Form.Group>
-
-      <Button type="submit" variant="success" className="ml-auto">
+      <Button disabled={isDisabled || hasSuccess || hasError} type="submit" variant="success" className="ml-auto" onSubmit={handleSubmit}>
         Submit
         </Button>
+      {hasSuccess && <p className='text-success'>Email successfully sent!</p>}
+      {hasError && <p className='text-danger'>Bummer, something went wrong.</p>}
     </Form>
   );
 }
