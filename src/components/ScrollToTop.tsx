@@ -1,16 +1,13 @@
+import NavLink from 'components/layout/NavLink';
 import React from 'react';
 import { Button, Navbar } from 'react-bootstrap';
-import { Link } from "react-scroll";
 
 function ScrollToTop() {
     return (
-        <Navbar fixed='bottom'><Link activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500} className='ml-auto'>
-            <Button>^</Button></Link>
+        <Navbar fixed='bottom'>
+            <span className='ml-auto'>
+                <NavLink link='about' name={<Button>^</Button>} />
+            </span>
         </Navbar>
     )
 }

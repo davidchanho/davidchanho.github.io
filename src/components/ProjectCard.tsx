@@ -9,8 +9,15 @@ function ProjectCard({ title, desc, backend, dataStorage, stateManager, hosting,
         <Card key={title}>
             <Card.Header >
                 <Card.Title className='d-flex align-items-center'>
-                    <div>{title}</div> <div className="ml-auto"><a className='mr-2' target="_blank" rel='noreferrer' href={github}><AiFillGithub />
-                    </a> <a target="_blank" rel='noreferrer' href={link}><BiLinkExternal /></a></div>
+                    <div>{title}</div>
+                    <div className="ml-auto">
+                        <a className='mr-2' target="_blank" rel='noreferrer' href={github}>
+                            <AiFillGithub />
+                        </a>
+                        <a target="_blank" rel='noreferrer' href={link}>
+                            <BiLinkExternal />
+                        </a>
+                    </div>
                 </Card.Title>
             </Card.Header>
             <Card.Body>

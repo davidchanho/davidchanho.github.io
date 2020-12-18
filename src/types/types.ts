@@ -1,4 +1,4 @@
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
 export interface SectionProps extends HTMLAttributes<HTMLDivElement> {
   header: string;
@@ -40,5 +40,5 @@ export interface IProject {
 
 export interface NavLinkProps {
   link: string;
-  name: string;
+  name: string | ReactNode;
 }
