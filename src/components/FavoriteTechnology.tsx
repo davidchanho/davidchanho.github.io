@@ -6,7 +6,7 @@ import { Element } from 'react-scroll';
 
 function FavoriteTechnology() {
   return (
-    <Element name='tech'>
+    <Element name='tech' className='mt-5'>
       <SectionHeader header='Favorite Technology' />
       <Container>
         <ListGroup>
