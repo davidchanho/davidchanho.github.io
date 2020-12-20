@@ -7,7 +7,9 @@ import { HeroContainer } from "styles/styles";
 function Hero() {
   return (
     <HeroContainer fluid className="vh-100 text-white p-5 d-flex align-items-center justify-content-center">
-      <MyImage />
+      <div>
+        <MyImage />
+      </div>
       <div>
         <AboutMe />
         <ContactDetails />

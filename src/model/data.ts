@@ -137,13 +137,13 @@ export const data = {
   education: {
     school: [
       {
-        title: "Johnson & Wales University &middot; 2012",
+        title: "Johnson & Wales University - 2012",
         subtitle: "Bachelors in Accounting",
       },
     ],
     certifications: [
-      { title: "Coding Bootcamp of UNC Chapel Hill &middot; 2020" },
-      { title: "Coursera IBM Data Science &middot; 2020" },
+      { title: "Coding Bootcamp of UNC Chapel Hill - 2020" },
+      { title: "Coursera IBM Data Science - 2020" },
     ],
   },
 };

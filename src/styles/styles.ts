@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 export const HeroContainer = styled(Container)`
   background-color: #202020;
+  img {
+    width: 150px;
+    margin-right: 100px;
+  }
 `;
 
 export const AboutMeContainer = styled.div`
@@ -19,3 +23,4 @@ export const ContactDetailsContainer = styled(ListGroup)`
     background-color: inherit;
  }
 `;
+

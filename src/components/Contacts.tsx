@@ -6,11 +6,9 @@ import { serviceId, templateId, userId } from '../config.json';
 
 const initialForm = { name: '', email: '', message: '' }
 
-function Contacts() {
+function Contacts({ setMessage }: { setMessage: any }) {
   const [form, setForm] = useState<ContactsProps>(initialForm)
   const [isDisabled, setDisabled] = useState<boolean>(true);
-  const [hasError, setError] = useState<boolean>(false);
-  const [hasSuccess, setSuccess] = useState<boolean | null>(null)
 
   const handleSubmit = (e: FormEvent<HTMLFormElement | HTMLButtonElement>) => {
     e.preventDefault();
@@ -18,19 +16,22 @@ function Contacts() {
     emailjs.sendForm(serviceId, templateId, '#contactForm', userId)
       .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
-        setSuccess(true);
         setForm(initialForm);
+        setMessage('Email successfully sent!')
       }, function (error) {
-        setError(true)
+        setMessage('Bummer, something went wrong.')
       });
     setForm(initialForm)
   };
 
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
+
     if (form.name.length > 3 && form.email.length > 3 && form.message.length > 3) {
       setDisabled(false);
     }
+
     setForm({
       ...form,
       [name]: value
@@ -38,7 +39,7 @@ function Contacts() {
   }
 
   return (
-    <Form id='contactForm' className='w-50 my-5 d-flex flex-column mx-auto justify-content-center' onSubmit={handleSubmit}>
+    <Form id='contactForm' className='w-50 vh-100 my-5 d-flex flex-column mx-auto ' onSubmit={handleSubmit}>
       <h1>Contact Me</h1>
       <Form.Group controlId="formName">
         <Form.Label>Name</Form.Label>
@@ -64,11 +65,9 @@ function Contacts() {
           rows={3}
         />
       </Form.Group>
-      <Button disabled={isDisabled || hasSuccess || hasError} type="submit" variant="success" className="ml-auto" onSubmit={handleSubmit}>
+      <Button disabled={isDisabled} type="submit" variant="success" className="ml-auto" onSubmit={handleSubmit}>
         Submit
         </Button>
-      {hasSuccess && <p className='text-success'>Email successfully sent!</p>}
-      {hasError && <p className='text-danger'>Bummer, something went wrong.</p>}
     </Form>
   );
 }

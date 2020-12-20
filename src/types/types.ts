@@ -25,20 +25,24 @@ export interface SectionSubtitleProps {
 
 export interface IProject {
   title: string;
-  desc: string;
-  frontend: string;
-  styling: string;
-  ui: string;
-  backend: string;
-  dataStorage: string;
-  stateManager: string;
-  auth: string;
-  hosting: string;
-  github: string;
-  link: string;
+  desc?: string;
+  frontend?: string;
+  styling?: string;
+  ui?: string;
+  backend?: string;
+  dataStorage?: string;
+  stateManager?: string;
+  auth?: string;
+  hosting?: string;
+  github?: string;
+  link?: string;
 }
 
 export interface NavLinkProps {
   link: string;
   name: string | ReactNode;
+}
+
+export interface MessageProps {
+  message?: string;
 }

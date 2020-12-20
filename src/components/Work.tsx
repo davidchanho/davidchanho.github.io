@@ -1,22 +1,20 @@
-import Section from 'components/layout/Section'
-import SectionItem from 'components/layout/SectionItem'
+import SectionHeader from 'components/layout/SectionHeader'
+import ProjectCard from 'components/ProjectCard'
 import React from 'react'
-import { Col, ListGroup, Row } from 'react-bootstrap'
+import { CardColumns, Container } from 'react-bootstrap'
+
 
 function Work() {
     return (
-        <Section header="Work">
-            <ListGroup>
-                <Row>
-                    <Col>
-                        <SectionItem title="Crazy Fire Mongolian Grill &middot; 2008 - 2010" subtitle="Assistant Manager" />
-                    </Col>
-                    <Col>
-                        <SectionItem title="CRD of America &middot; 2010 - current" subtitle="Accountant" />
-                    </Col>
-                </Row>
-            </ListGroup>
-        </Section>
+        <div className="my-5">
+            <SectionHeader header='Work' />
+            <Container>
+                <CardColumns className='mx-auto'>
+                    <ProjectCard title="Crazy Fire Mongolian Grill" desc='' github='' link='' />
+                    <ProjectCard title="Meet at Knightdale" desc='' github='' link='' />
+                </CardColumns>
+            </Container>
+        </div>
     )
 }
 
