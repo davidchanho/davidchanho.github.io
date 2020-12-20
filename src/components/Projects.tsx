@@ -1,21 +1,22 @@
 import SectionHeader from "components/layout/SectionHeader";
-import ProjectCard from "components/ProjectCard";
+import Project from "components/Project";
 import { data } from "model/data";
 import React from "react";
-import { CardColumns, Container } from "react-bootstrap";
+import { Container, ListGroup } from "react-bootstrap";
+import { Element } from 'react-scroll';
 
 function Projects() {
   return (
-    <div className="my-5">
+    <Element name='projects'>
       <SectionHeader header='Projects' />
       <Container>
-        <CardColumns className='mx-auto'>
+        <ListGroup className='mx-auto'>
           {data.projects.map((l) =>
-            <ProjectCard key={l.title} {...l} />
+            <Project key={l.title} {...l} />
           )}
-        </CardColumns>
+        </ListGroup>
       </Container>
-    </div>
+    </Element>
   );
 }
 

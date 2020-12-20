@@ -2,20 +2,21 @@ import SectionHeader from "components/layout/SectionHeader";
 import { data } from "model/data";
 import React from "react";
 import { Col, Container, ListGroup, ListGroupItem, Row } from "react-bootstrap";
+import { Element } from 'react-scroll';
 
 function FavoriteTechnology() {
   return (
-    <div>
+    <Element name='tech'>
       <SectionHeader header='Favorite Technology' />
       <Container>
         <ListGroup>
           {data.favoriteTech.map((el, index) => (
-            <ListGroupItem className='border-0' key={`favorite-tech-${index}`}>
+            <ListGroupItem className='border-0 mb-3' key={`favorite-tech-${index}`}>
               <Row>
                 <Col xs={3}>
                   <img alt='' src={el.src} />
                 </Col>
-                <Col>
+                <Col xs={6}>
                   {el.text}
                 </Col>
               </Row>
@@ -23,7 +24,7 @@ function FavoriteTechnology() {
           ))}
         </ListGroup>
       </Container>
-    </div>
+    </Element>
   );
 }
 

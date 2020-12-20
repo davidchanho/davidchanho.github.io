@@ -7,7 +7,6 @@ import Footer from "components/layout/Footer";
 import ScrollToTop from "components/layout/ScrollToTop";
 import Template from "components/layout/Template";
 import Projects from "components/Projects";
-import Work from "components/Work";
 import React, { useState } from "react";
 
 function Home() {
@@ -15,17 +14,13 @@ function Home() {
 
   return (
     <Template>
-      <div id='about' />
       <Hero />
-      <div id='education' />
       <Education />
-      <div id='work' />
-      <Work />
-      <div id='projects' />
+      {/* <Element name="work">
+        <Work />
+      </Element> */}
       <Projects />
-      <div id='tech' />
       <FavoriteTechnology />
-      <div id='contacts' />
       <Contacts setMessage={setMessage} />
       <Footer>{message && <ContactsToast message={message} />} <ScrollToTop /></Footer>
     </Template>

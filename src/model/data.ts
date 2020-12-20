@@ -25,7 +25,7 @@ export const data = {
       desc: "A team chatting app",
       frontend: "React",
       styling: "Scss Modules",
-      ui: "n/a",
+      ui: "bootstrap",
       backend: "Firebase",
       dataStorage: "Firestore",
       stateManager: "React Context",
@@ -48,20 +48,20 @@ export const data = {
     //   github: "https://github.com/davidchanho/react-spotify",
     //   link: "",
     // },
-    {
-      title: "Jira",
-      desc: "A project management system",
-      frontend: "React",
-      styling: "",
-      ui: "bootstrap",
-      backend: "Django (Python)",
-      dataStorage: "SQL",
-      stateManager: "Redux Toolkit",
-      auth: "",
-      hosting: "AWS S3",
-      github: "https://github.com/davidchanho/react-jira-clone",
-      link: "",
-    },
+    // {
+    //   title: "Jira",
+    //   desc: "A project management system",
+    //   frontend: "React",
+    //   styling: "",
+    //   ui: "bootstrap",
+    //   backend: "Django (Python)",
+    //   dataStorage: "SQL",
+    //   stateManager: "Redux Toolkit",
+    //   auth: "",
+    //   hosting: "AWS S3",
+    //   github: "https://github.com/davidchanho/react-jira-clone",
+    //   link: "",
+    // },
     // {
     //   title: "Amazon",
     //   desc: "A ecommerce site",
@@ -109,30 +109,30 @@ export const data = {
     {
       src: typescript,
       text:
-        "I enjoy using typescript in my projects due to its ability to automatically handle imports and notifies me of potential errors.",
+        "I enjoy using typescript in my projects due to its ability to automatically handle imports. However, the greatest reason to use typescript over javascript is its ability to notify me of when and where there are mistakes ahead of time. ",
     },
     {
       src: react,
       text:
-        "React is a great framework. It have great flexiblity and have a large community around it.",
+        "React is a great framework. It have great flexibility and have a large community around it. I prefer React over Vue and Angular because it relatively quick to get started.",
     },
     {
       src: redux,
       text:
-        "Redux a helpful library to manage state globally. I have a fondness for Redux-Toolkit which is a collection of packages that simplifies redux set up and reduces redunant code.",
+        "Redux is a helpful library to manage state globally. I have a fondness for Redux-Toolkit which is a collection of packages that simplifies redux set up and reduces redundant code. It can be setup quickly through the Create React App.",
     },
-    {
-      src: d3,
-      text: "D3.js is my go to for data visualizations for websites. ",
-    },
-    {
-      src: python,
-      text: "Python is a simple programming language with",
-    },
-    {
-      src: pandas,
-      text: "Pandas ",
-    },
+    // {
+    //   src: d3,
+    //   text: "D3.js is my go to for data visualizations for websites. ",
+    // },
+    // {
+    //   src: python,
+    //   text: "Python is a simple programming language with",
+    // },
+    // {
+    //   src: pandas,
+    //   text: "Pandas ",
+    // },
   ],
   education: {
     school: [

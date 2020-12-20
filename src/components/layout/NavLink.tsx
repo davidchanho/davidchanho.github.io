@@ -1,16 +1,17 @@
 import React from 'react'
-import { Link } from 'react-scroll'
+import { NavLinkContainer } from 'styles/styles'
 import { NavLinkProps } from 'types/types'
 
-function NavLink({ link, name }: NavLinkProps) {
+function NavLink({ link, name, ...rest }: NavLinkProps) {
     return (
-        <Link activeClass="active"
+        <NavLinkContainer
             to={link}
             spy={true}
             smooth={true}
-            offset={-70}
-            duration={500} className='mr-3 click text-capitalize'>{name}
-        </Link>
+            offset={-90}
+            {...rest}
+            className='mx-4 click text-capitalize'>{name}
+        </NavLinkContainer>
     )
 }
 

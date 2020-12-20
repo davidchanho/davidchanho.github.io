@@ -1,0 +1,3 @@
+The New York Times best seller, Rise of the Robots - Technology and the Threat of a Jobless Future, is a illuminating look behind the veil of the current state of economics and technology. 
+
+I have never read a book that is so inspiring and frighting. We are currently at a fork in the road. AI, automation, algorithms and robotics can be used to help Are sowing the seeds of our own destruction or are we on the path of salvation? This book is one of the reasons why I decided to change career paths.     
