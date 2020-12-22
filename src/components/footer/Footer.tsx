@@ -1,10 +1,11 @@
-import React, { PropsWithChildren } from 'react'
+import ScrollToTop from 'components/footer/ScrollToTop'
+import React from 'react'
 import { Navbar } from 'react-bootstrap'
 
-function Footer({ children }: PropsWithChildren<{}>) {
+function Footer() {
     return (
         <Navbar fixed='bottom'>
-            {children}
+            <ScrollToTop />
         </Navbar>
     )
 }

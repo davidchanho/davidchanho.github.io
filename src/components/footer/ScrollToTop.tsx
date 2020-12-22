@@ -1,7 +1,8 @@
-import NavLink from 'components/layout/NavLink';
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { RiArrowDropUpLine } from 'react-icons/ri';
+import Scroll from 'react-scroll';
+
 interface IScrollToTop {
     scrollpos: number;
     visible: boolean;
@@ -12,6 +13,13 @@ function ScrollToTop() {
         scrollpos: window.pageYOffset,
         visible: false
     })
+
+    const scroll = Scroll.animateScroll;
+
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    }
+
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.pageYOffset;
@@ -28,9 +36,15 @@ function ScrollToTop() {
         }
     }, [])
 
+    const { visible } = state
+
     return (
         <span className='ml-auto' >
-            {state.visible && <NavLink link='about' name={<Button><RiArrowDropUpLine size={32} /></Button>} />}
+            {visible &&
+                <a onClick={scrollToTop} href='#!'>
+                    <Button>
+                        <RiArrowDropUpLine size={32} />
+                    </Button></a>}
         </span>
     )
 }

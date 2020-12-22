@@ -1,15 +1,19 @@
-import SectionHeader from 'components/layout/SectionHeader';
+import Section from 'components/section/Section';
 import emailjs from 'emailjs-com';
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Element } from 'react-scroll';
-import { ContactsProps } from "types/types";
-import { serviceId, templateId, userId } from '../config.json';
+import { serviceId, templateId, userId } from '../../config.json';
 
-const initialForm = { name: '', email: '', message: '' }
+interface ContactFormProps {
+  name: string;
+  email: string;
+  message: string;
+}
 
-function Contacts({ setMessage }: { setMessage: any }) {
-  const [form, setForm] = useState<ContactsProps>(initialForm)
+const initialForm: ContactFormProps = { name: '', email: '', message: '' }
+
+function ContactForm() {
+  const [form, setForm] = useState<ContactFormProps>(initialForm)
   const [isDisabled, setDisabled] = useState<boolean>(true);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement | HTMLButtonElement>) => {
@@ -19,10 +23,10 @@ function Contacts({ setMessage }: { setMessage: any }) {
       .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
         setForm(initialForm);
-        setMessage('Email successfully sent!')
       }, function (error) {
-        setMessage('Bummer, something went wrong.')
+        console.log('Error');
       });
+
     setForm(initialForm)
   };
 
@@ -32,6 +36,7 @@ function Contacts({ setMessage }: { setMessage: any }) {
     if (form.name.length > 3 && form.email.length > 3 && form.message.length > 3) {
       setDisabled(false);
     }
+
     setForm({
       ...form,
       [name]: value
@@ -39,9 +44,8 @@ function Contacts({ setMessage }: { setMessage: any }) {
   }
 
   return (
-    <Element name='contacts'>
+    <Section name='contactForm' header='Contact Me'>
       <Form id='contactForm' className='w-50 vh-100 my-5 d-flex flex-column mx-auto ' onSubmit={handleSubmit}>
-        <SectionHeader header='Contact Me' />
         <Form.Group controlId="formName">
           <Form.Label>Name</Form.Label>
           <Form.Control onChange={handleChange} name="name" type="text" placeholder="Enter name" />
@@ -66,12 +70,13 @@ function Contacts({ setMessage }: { setMessage: any }) {
             rows={3}
           />
         </Form.Group>
+
         <Button disabled={isDisabled} type="submit" variant="success" className="ml-auto" onSubmit={handleSubmit}>
           Submit
         </Button>
       </Form>
-    </Element>
+    </Section>
   );
 }
 
-export default Contacts;
+export default ContactForm;

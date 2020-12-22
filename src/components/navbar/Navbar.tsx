@@ -1,5 +1,5 @@
-import ExternalLinks from "components/layout/ExternalLinks";
-import NavLinks from "components/layout/NavLinks";
+import ExternalLinks from "components/navbar/ExternalLinks";
+import NavLinks from "components/navbar/NavLinks";
 import React from "react";
 import { Navbar as BsNavbar } from "react-bootstrap";
 
