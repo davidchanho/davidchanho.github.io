@@ -1,42 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import { useScrollVisibility } from 'hooks/useScrollVisibility';
+import React from 'react';
 import { Button } from 'react-bootstrap';
 import { RiArrowDropUpLine } from 'react-icons/ri';
-import Scroll from 'react-scroll';
-
-interface IScrollToTop {
-    scrollpos: number;
-    visible: boolean;
-}
+import { animateScroll as scroll } from 'react-scroll';
 
 function ScrollToTop() {
-    const [state, setState] = useState<IScrollToTop>({
-        scrollpos: window.pageYOffset,
-        visible: false
-    })
+    const { scrollToTop } = scroll;
 
-    const scroll = Scroll.animateScroll;
-
-    const scrollToTop = () => {
-        scroll.scrollToTop();
-    }
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
-            const visible = currentScrollPos > 250;
-
-            setState({
-                scrollpos: currentScrollPos,
-                visible
-            });
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        }
-    }, [])
-
-    const { visible } = state
+    const { visible } = useScrollVisibility();
 
     return (
         <span className='ml-auto' >

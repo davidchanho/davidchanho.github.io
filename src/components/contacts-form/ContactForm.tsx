@@ -1,6 +1,7 @@
 import Section from 'components/section/Section';
 import emailjs from 'emailjs-com';
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import { useLocalStorage } from 'hooks/useLocalStorage';
+import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { serviceId, templateId, userId } from '../../config.json';
 
@@ -15,6 +16,11 @@ const initialForm: ContactFormProps = { name: '', email: '', message: '' }
 function ContactForm() {
   const [form, setForm] = useState<ContactFormProps>(initialForm)
   const [isDisabled, setDisabled] = useState<boolean>(true);
+  const [stored, setStored] = useLocalStorage('form', '{}');
+
+  useEffect(() => {
+    setForm(stored)
+  }, [stored])
 
   const handleSubmit = (e: FormEvent<HTMLFormElement | HTMLButtonElement>) => {
     e.preventDefault();
@@ -37,18 +43,29 @@ function ContactForm() {
       setDisabled(false);
     }
 
+    setStored({
+      ...form,
+      [name]: value
+    })
+
     setForm({
       ...form,
       [name]: value
     })
   }
 
+  const handleClear = (e: FormEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setStored('form', initialForm)
+    setForm(initialForm)
+  };
+
   return (
     <Section name='contactForm' header='Contact Me'>
       <Form id='contactForm' className='w-50 vh-100 my-5 d-flex flex-column mx-auto ' onSubmit={handleSubmit}>
         <Form.Group controlId="formName">
           <Form.Label>Name</Form.Label>
-          <Form.Control onChange={handleChange} name="name" type="text" placeholder="Enter name" />
+          <Form.Control defaultValue={form.name} onChange={handleChange} name="name" type="text" placeholder="Enter name" />
         </Form.Group>
 
         <Form.Group controlId="formEmail">
@@ -57,6 +74,7 @@ function ContactForm() {
             name="email"
             type="email"
             placeholder="Enter email"
+            defaultValue={form.email}
           />
         </Form.Group>
 
@@ -68,12 +86,17 @@ function ContactForm() {
             placeholder="Enter message"
             as="textarea"
             rows={3}
+            defaultValue={form.message}
           />
         </Form.Group>
-
-        <Button disabled={isDisabled} type="submit" variant="success" className="ml-auto" onSubmit={handleSubmit}>
-          Submit
+        <div className='d-flex align-items-center justify-content-between'>
+          <Button variant="danger" onSubmit={handleClear}>
+            Clear
         </Button>
+          <Button disabled={isDisabled} type="submit" variant="success" onSubmit={handleSubmit}>
+            Submit
+        </Button>
+        </div>
       </Form>
     </Section>
   );
