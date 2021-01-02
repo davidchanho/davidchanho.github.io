@@ -1,7 +1,6 @@
 import React from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
-
 function ExternalLinks() {
     return (
         <div className='ml-3 d-flex align-items-center'>

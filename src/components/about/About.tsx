@@ -28,6 +28,7 @@ function About() {
             <h1>Hello, I am David Ho</h1>
           </div>
         </div>
+        
         <div className='ml-5'>
           <p>
             I'm a Raleigh based Web Developer.

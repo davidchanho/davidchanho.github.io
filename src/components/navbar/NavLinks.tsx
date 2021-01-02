@@ -3,8 +3,8 @@ import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 const NavLink = styled(Link)`
- cursor: pointer;
- margin-right: 15px;
+    cursor: pointer;
+    margin-right: 15px;
 `;
 
 function NavLinks() {
@@ -15,6 +15,9 @@ function NavLinks() {
             </NavLink>
             <NavLink activeClass="active" to="projects" spy={true} hashSpy={true} smooth={true} duration={500}>
                 Projects
+            </NavLink>
+            <NavLink activeClass="active" to="blog" spy={true} hashSpy={true} smooth={true} duration={500}>
+                Blog
             </NavLink>
             <NavLink activeClass="active" to="contactForm" spy={true} hashSpy={true} smooth={true} offset={-200} duration={500}>
                 Contact Me

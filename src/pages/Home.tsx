@@ -1,4 +1,5 @@
 import Hero from "components/about/About";
+import BlogList from "components/blog/BlogList";
 import ContactForm from "components/contacts-form/ContactForm";
 import Footer from "components/footer/Footer";
 import Projects from "components/projects/Projects";
@@ -10,6 +11,7 @@ function Home() {
     <Template>
       <Hero />
       <Projects />
+      <BlogList/>
       <ContactForm />
       <Footer />
     </Template>
