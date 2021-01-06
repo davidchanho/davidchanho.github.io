@@ -1,11 +1,5 @@
+import { NavLink } from 'components/nav-links/NavLinks.styles';
 import React from 'react';
-import { Link } from 'react-scroll';
-import styled from 'styled-components';
-
-const NavLink = styled(Link)`
-    cursor: pointer;
-    margin-right: 15px;
-`;
 
 function NavLinks() {
     return (

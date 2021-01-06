@@ -15,7 +15,9 @@ function ScrollToTop() {
                 <a onClick={scrollToTop} href='#!'>
                     <Button>
                         <RiArrowDropUpLine size={32} />
-                    </Button></a>}
+                    </Button>
+                </a>
+            }
         </span>
     )
 }

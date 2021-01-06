@@ -1,8 +1,5 @@
+import { HeaderProps } from 'components/header/Header.types'
 import React from 'react'
-
-interface HeaderProps {
-    header: string;
-}
 
 function Header({ header }: HeaderProps) {
     return (

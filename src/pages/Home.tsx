@@ -1,5 +1,5 @@
 import Hero from "components/about/About";
-import BlogList from "components/blog/BlogList";
+import BlogList from "components/blog-list/BlogList";
 import ContactForm from "components/contacts-form/ContactForm";
 import Footer from "components/footer/Footer";
 import Projects from "components/projects/Projects";

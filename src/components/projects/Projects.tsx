@@ -1,4 +1,4 @@
-import Project from "components/projects/Project";
+import Project from "components/project/Project";
 import Section from "components/section/Section";
 import React from "react";
 import { ListGroup } from "react-bootstrap";

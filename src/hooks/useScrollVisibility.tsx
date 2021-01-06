@@ -1,9 +1,5 @@
+import { IScrollToTop } from "hooks/useScrollVisibility.types";
 import { useEffect, useState } from "react";
-
-interface IScrollToTop {
-    scrollpos: number;
-    visible: boolean;
-}
 
 export const useScrollVisibility = () => {
     const [state, setState] = useState<IScrollToTop>({
@@ -29,5 +25,5 @@ export const useScrollVisibility = () => {
 
     const { visible } = state
 
-    return {visible}
+    return { visible }
 }

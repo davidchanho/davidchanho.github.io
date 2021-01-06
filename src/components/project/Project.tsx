@@ -1,12 +1,7 @@
+import { IProject } from 'components/project/Project.types'
 import React from 'react'
 import { ListGroupItem, NavLink } from 'react-bootstrap'
 import { AiFillGithub } from 'react-icons/ai'
-
-interface IProject {
-    title: string;
-    github: string;
-    link: string;
-}
 
 function Project({ title, github, link }: IProject) {
     return (

@@ -1,4 +1,4 @@
-import BlogPost from 'components/blog/BlogPost'
+import BlogPost from 'components/blog-post/BlogPost'
 import Section from 'components/section/Section'
 import React from 'react'
 import { ListGroup } from 'react-bootstrap'

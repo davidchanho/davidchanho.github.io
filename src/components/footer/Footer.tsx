@@ -1,4 +1,4 @@
-import ScrollToTop from 'components/footer/ScrollToTop'
+import ScrollToTop from 'components/scroll-to-top/ScrollToTop'
 import React from 'react'
 import { Navbar } from 'react-bootstrap'
 

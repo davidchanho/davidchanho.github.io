@@ -1,11 +1,8 @@
+import { BlogPostProps } from 'components/blog-post/BlogPost.types';
 import React, { useEffect, useState } from 'react';
 import { ListGroupItem } from 'react-bootstrap';
 import ReactMarkdown from "react-markdown";
 import gfm from 'remark-gfm';
-
-interface BlogPostProps {
-    file: RequestInfo;
-}
 
 function BlogPost({ file }: BlogPostProps) {
     const [state, setState] = useState({ markdown: "" });

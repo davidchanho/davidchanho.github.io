@@ -1,20 +1,6 @@
+import { AboutContainer } from "components/about/About.styles";
 import React from "react";
 import { Container } from "react-bootstrap";
-import { Element } from 'react-scroll';
-import styled from "styled-components";
-
-const AboutContainer = styled(Element)`
-  background-color: #202020;
-  img {
-    width: 12vw;
-  }
-  h1 {
-    font-size: 6vw;
-  }
-  p {
-    font-size: 2vw;
-  }
-`;
 
 function About() {
   return (
@@ -28,7 +14,7 @@ function About() {
             <h1>Hello, I am David Ho</h1>
           </div>
         </div>
-        
+
         <div className='ml-5'>
           <p>
             I'm a Raleigh based Web Developer.
