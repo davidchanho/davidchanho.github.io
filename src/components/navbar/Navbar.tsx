@@ -5,7 +5,7 @@ import { Navbar as BsNavbar } from "react-bootstrap";
 
 function Navbar() {
   return (
-    <BsNavbar expand="lg" bg="light" className="fixed-top">
+    <BsNavbar expand="lg" bg="light">
       <BsNavbar.Brand href='/' className='d-flex align-items-center'>
         David Chan Ho <ExternalLinks />
       </BsNavbar.Brand>
