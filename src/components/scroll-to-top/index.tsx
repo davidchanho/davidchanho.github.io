@@ -9,7 +9,7 @@ function ScrollToTop() {
   return (
     <span className="ml-auto">
       <a
-        className={visible ? "visible" : "hidden"}
+        className={visible ? "visible" : "invisible"}
         onClick={scrollTop}
         href="#!"
       >
