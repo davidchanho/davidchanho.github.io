@@ -1,8 +1,13 @@
-import { ContactFormProps } from "components/contacts-form/ContactForm.types";
 import emailjs from "emailjs-com";
 import { ChangeEvent, FormEvent, useState } from "react";
 
-export const useEmailForm = () => {
+interface ContactFormProps {
+  name: string;
+  email: string;
+  message: string;
+}
+
+ const useEmail = () => {
   const initialForm: ContactFormProps = { name: "", email: "", message: "" };
   const [form, setForm] = useState<ContactFormProps>(initialForm);
 
@@ -38,3 +43,5 @@ export const useEmailForm = () => {
 
   return { form, submitEmail, changeEmail };
 };
+
+export default useEmail

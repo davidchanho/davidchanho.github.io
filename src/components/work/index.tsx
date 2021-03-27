@@ -1,5 +1,5 @@
-import Project from "components/project/Project";
-import Section from "components/section/Section";
+import Project from "../project";
+import Section from "../section";
 import React from "react";
 import { ListGroup } from "react-bootstrap";
 
