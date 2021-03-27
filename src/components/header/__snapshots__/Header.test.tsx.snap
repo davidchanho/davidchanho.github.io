@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<h3
+  className="text-center text-capitalize mb-5"
+>
+  <u>
+    test
+  </u>
+</h3>
+`;

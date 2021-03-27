@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./App";
+import NavLinks from ".";
 
-describe("App", () => {
+describe("NavLinks", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<App />).toJSON();
+    const tree = renderer.create(<NavLinks />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

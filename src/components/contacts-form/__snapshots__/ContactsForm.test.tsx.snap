@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactForm renders correctly 1`] = `
+<div
+  className="sc-bdfBwQ fKNFrQ"
+  name="contactForm"
+>
+  <h3
+    className="text-center text-capitalize mb-5"
+  >
+    <u>
+      Contact Me
+    </u>
+  </h3>
+  <div
+    className="container"
+  >
+    <form
+      className="w-50 vh-100 d-flex flex-column mx-auto "
+      id="contactForm"
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="formName"
+        >
+          Name
+        </label>
+        <input
+          className="form-control"
+          defaultValue=""
+          id="formName"
+          name="name"
+          onChange={[Function]}
+          placeholder="Enter name"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="formEmail"
+        >
+          Email address
+        </label>
+        <input
+          className="form-control"
+          defaultValue=""
+          id="formEmail"
+          name="email"
+          onChange={[Function]}
+          placeholder="Enter email"
+          type="email"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="formMessage"
+        >
+          Message
+        </label>
+        <textarea
+          className="form-control"
+          defaultValue=""
+          id="formMessage"
+          name="message"
+          onChange={[Function]}
+          placeholder="Enter message"
+          rows={10}
+          style={
+            Object {
+              "resize": "none",
+            }
+          }
+          type="text"
+        />
+      </div>
+      <div
+        className="d-flex justify-content-end"
+      >
+        <button
+          className="btn btn-success"
+          disabled={false}
+          onSubmit={[Function]}
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

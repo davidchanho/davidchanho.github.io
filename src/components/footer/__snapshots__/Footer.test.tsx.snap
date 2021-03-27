@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<nav
+  className="navbar navbar-expand navbar-light fixed-bottom"
+>
+  <span
+    className="ml-auto"
+  >
+    <a
+      className="hidden"
+      href="#!"
+      onClick={[Function]}
+    >
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height={32}
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width={32}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M12 11.828l-2.828 2.829-1.415-1.414L12 9l4.243 4.243-1.415 1.414L12 11.828z"
+            />
+          </g>
+        </svg>
+      </button>
+    </a>
+  </span>
+</nav>
+`;

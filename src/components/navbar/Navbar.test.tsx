@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./App";
+import Navbar from ".";
 
-describe("App", () => {
+describe("Navbar", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<App />).toJSON();
+    const tree = renderer.create(<Navbar />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

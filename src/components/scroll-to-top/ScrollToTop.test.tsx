@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./App";
+import ScrollToTop from ".";
 
-describe("App", () => {
+describe("ScrollToTop", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<App />).toJSON();
+    const tree = renderer.create(<ScrollToTop />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

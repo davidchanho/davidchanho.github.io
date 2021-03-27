@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section renders correctly 1`] = `
+<div
+  className="sc-bdfBwQ fKNFrQ"
+  name="name"
+>
+  <h3
+    className="text-center text-capitalize mb-5"
+  >
+    <u>
+      header
+    </u>
+  </h3>
+  <div
+    className="container"
+  >
+    <div>
+      test
+    </div>
+  </div>
+</div>
+`;

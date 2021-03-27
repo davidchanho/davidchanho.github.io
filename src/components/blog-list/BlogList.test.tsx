@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./App";
+import BlogList from ".";
 
-describe("App", () => {
+describe("BlogList", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<App />).toJSON();
+    const tree = renderer.create(<BlogList />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

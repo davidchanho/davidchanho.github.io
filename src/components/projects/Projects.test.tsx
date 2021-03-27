@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./App";
+import Projects from ".";
 
-describe("App", () => {
+describe("Projects", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<App />).toJSON();
+    const tree = renderer.create(<Projects />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavLinks renders correctly 1`] = `
+<div
+  className="ml-auto"
+>
+  <a
+    className="sc-bdfBwQ cOVWtI"
+    onClick={[Function]}
+  >
+    About
+  </a>
+  <a
+    className="sc-bdfBwQ cOVWtI"
+    onClick={[Function]}
+  >
+    Projects
+  </a>
+  <a
+    className="sc-bdfBwQ cOVWtI"
+    onClick={[Function]}
+  >
+    Blog
+  </a>
+  <a
+    className="sc-bdfBwQ cOVWtI"
+    onClick={[Function]}
+  >
+    Contact Me
+  </a>
+</div>
+`;

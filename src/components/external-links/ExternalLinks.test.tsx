@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./App";
+import ExternalLinks from ".";
 
-describe("App", () => {
+describe("ExternalLinks", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<App />).toJSON();
+    const tree = renderer.create(<ExternalLinks />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

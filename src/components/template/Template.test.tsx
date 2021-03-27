@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from "./App";
+import Template from ".";
 
-describe("App", () => {
+describe("Template", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<App />).toJSON();
+    const tree = renderer.create(<Template >test</Template>).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
