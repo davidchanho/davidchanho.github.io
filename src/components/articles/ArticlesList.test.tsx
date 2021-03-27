@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import BlogList from ".";
+import ArticlesList from ".";
 
-describe("BlogList", () => {
+describe("ArticlesList", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<BlogList />).toJSON();
+    const tree = renderer.create(<ArticlesList />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
