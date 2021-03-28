@@ -43,7 +43,7 @@ function ContactForm() {
             type="text"
             placeholder="Enter message"
             as="textarea"
-            rows={10}
+            rows={5}
             defaultValue={form.message}
             style={{ resize: "none" }}
           />

@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import {useLocation} from 'react-router-dom'
 
 const NavLink = styled.a`
   cursor: pointer;
   margin-right: 15px;
   color: black;
 
-  &:hover {
+  &:hover, &:focus, &.active {
     color: black;
     text-decoration: none;
     border-bottom: 3px solid black;
@@ -14,6 +15,7 @@ const NavLink = styled.a`
 `;
 
 function NavLinks() {
+    
   return (
     <div className="ml-auto">
       <NavLink href="/#projects">projects</NavLink>
