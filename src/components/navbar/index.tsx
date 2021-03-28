@@ -5,7 +5,7 @@ import NavLinks from "../nav-links";
 
 function Navbar() {
   return (
-    <BsNavbar expand="lg" bg="light">
+    <BsNavbar expand="lg" bg="light" className='w-100 position-fixed'>
       <BsNavbar.Brand href="/" className="d-flex align-items-center">
         David Chan Ho <ExternalLinks />
       </BsNavbar.Brand>

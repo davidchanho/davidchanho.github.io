@@ -21,6 +21,6 @@ code {
     monospace;
 }
 
-img {
-  width: 100%;
+.navbar {
+  z-index: 100;
 }
