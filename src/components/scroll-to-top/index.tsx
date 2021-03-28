@@ -5,18 +5,12 @@ import useScroll from "./useScroll";
 
 function ScrollToTop() {
   const { visible, scrollTop } = useScroll();
-  
+
   return (
     <span className="ml-auto">
-      <a
-        className={visible ? "visible" : "invisible"}
-        onClick={scrollTop}
-        href="#!"
-      >
-        <Button>
-          <RiArrowDropUpLine size={32} />
-        </Button>
-      </a>
+      <Button className={visible ? "visible" : "invisible"} onClick={scrollTop}>
+        <RiArrowDropUpLine size={32} />
+      </Button>
     </span>
   );
 }

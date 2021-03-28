@@ -1,9 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { Element } from "react-scroll";
 import styled from "styled-components";
 
-const AboutContainer = styled(Element)`
+const AboutContainer = styled.div`
   background-color: #202020;
   img {
     width: 12vw;
@@ -18,7 +17,7 @@ const AboutContainer = styled(Element)`
 
 function About() {
   return (
-    <AboutContainer name="about">
+    <AboutContainer>
       <Container
         fluid
         className="vh-100 text-white px-5 d-flex flex-column align-items-center justify-content-center"

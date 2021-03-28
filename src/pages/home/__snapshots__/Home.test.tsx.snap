@@ -536,7 +536,7 @@ exports[`Home renders correctly 1`] = `
       className="ml-auto"
     >
       <a
-        className="hidden"
+        className="invisible"
         href="#!"
         onClick={[Function]}
       >

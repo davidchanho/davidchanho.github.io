@@ -1,8 +1,7 @@
-import Header from "../header";
-import { Element } from "react-scroll";
 import React, { ReactNode } from "react";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
+import Header from "../header";
 
 interface Props {
   name: string;
@@ -10,7 +9,7 @@ interface Props {
   children: ReactNode;
 }
 
-const SectionContainer = styled(Element)`
+const SectionContainer = styled.div`
   height: 100vh;
   margin-bottom: 200px;
   display: flex;
@@ -21,7 +20,7 @@ const SectionContainer = styled(Element)`
 
 function Section({ name, header, children }: Props) {
   return (
-    <SectionContainer name={name}>
+    <SectionContainer id={name}>
       <Header header={header} />
       <Container>{children}</Container>
     </SectionContainer>

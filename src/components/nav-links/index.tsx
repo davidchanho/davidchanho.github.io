@@ -1,30 +1,26 @@
-
-import React from 'react';
-import { Link } from "react-scroll";
+import React from "react";
 import styled from "styled-components";
 
-const NavLink = styled(Link)`
+const NavLink = styled.a`
   cursor: pointer;
   margin-right: 15px;
+  color: black;
+
+  &:hover {
+    color: black;
+    text-decoration: none;
+    border-bottom: 3px solid black;
+  }
 `;
 
 function NavLinks() {
-    return (
-        <div className="ml-auto" >
-            <NavLink activeClass="active" to="about" spy={true} hashSpy={true} smooth={true} duration={500}>
-                About
-            </NavLink>
-            <NavLink activeClass="active" to="projects" spy={true} hashSpy={true} smooth={true} duration={500}>
-                Projects
-            </NavLink>
-            <NavLink activeClass="active" to="blog" spy={true} hashSpy={true} smooth={true} duration={500}>
-                Blog
-            </NavLink>
-            <NavLink activeClass="active" to="contactForm" spy={true} hashSpy={true} smooth={true} offset={-200} duration={500}>
-                Contact Me
-            </NavLink>
-        </div>
-    )
+  return (
+    <div className="ml-auto">
+      <NavLink href="/#projects">projects</NavLink>
+      <NavLink href="/#work">work</NavLink>
+      <NavLink href="/#contactForm">contact</NavLink>
+    </div>
+  );
 }
 
-export default NavLinks
+export default NavLinks;
