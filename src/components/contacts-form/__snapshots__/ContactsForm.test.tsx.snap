@@ -3,7 +3,7 @@
 exports[`ContactForm renders correctly 1`] = `
 <div
   className="sc-bdfBwQ fKNFrQ"
-  name="contactForm"
+  id="contactForm"
 >
   <h3
     className="text-center text-capitalize mb-5"
@@ -74,7 +74,7 @@ exports[`ContactForm renders correctly 1`] = `
           name="message"
           onChange={[Function]}
           placeholder="Enter message"
-          rows={10}
+          rows={5}
           style={
             Object {
               "resize": "none",

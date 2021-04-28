@@ -3,7 +3,7 @@
 exports[`Projects renders correctly 1`] = `
 <div
   className="sc-bdfBwQ fKNFrQ"
-  name="projects"
+  id="projects"
 >
   <h3
     className="text-center text-capitalize mb-5"

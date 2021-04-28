@@ -3,7 +3,7 @@
 exports[`Section renders correctly 1`] = `
 <div
   className="sc-bdfBwQ fKNFrQ"
-  name="name"
+  id="name"
 >
   <h3
     className="text-center text-capitalize mb-5"

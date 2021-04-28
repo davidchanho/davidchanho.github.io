@@ -5,28 +5,22 @@ exports[`NavLinks renders correctly 1`] = `
   className="ml-auto"
 >
   <a
-    className="sc-bdfBwQ cOVWtI"
-    onClick={[Function]}
+    className="sc-bdfBwQ iFFCtp"
+    href="/#projects"
   >
-    About
+    projects
   </a>
   <a
-    className="sc-bdfBwQ cOVWtI"
-    onClick={[Function]}
+    className="sc-bdfBwQ iFFCtp"
+    href="/#work"
   >
-    Projects
+    work
   </a>
   <a
-    className="sc-bdfBwQ cOVWtI"
-    onClick={[Function]}
+    className="sc-bdfBwQ iFFCtp"
+    href="/#contactForm"
   >
-    Blog
-  </a>
-  <a
-    className="sc-bdfBwQ cOVWtI"
-    onClick={[Function]}
-  >
-    Contact Me
+    contact
   </a>
 </div>
 `;

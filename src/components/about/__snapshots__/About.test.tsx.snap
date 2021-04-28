@@ -3,7 +3,6 @@
 exports[`About renders correctly 1`] = `
 <div
   className="sc-bdfBwQ SIfDp"
-  name="about"
 >
   <div
     className="vh-100 text-white px-5 d-flex flex-column align-items-center justify-content-center container-fluid"
